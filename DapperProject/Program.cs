@@ -1,7 +1,11 @@
+using DapperProject.Containers;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+builder.Services.ContainerDependency();
 
 var app = builder.Build();
 
